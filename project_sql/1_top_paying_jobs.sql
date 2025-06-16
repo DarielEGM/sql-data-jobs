@@ -23,7 +23,7 @@ WHERE
     job_location = 'Anywhere' AND job_title_short = 'Data Analyst' AND salary_year_avg IS NOT NULL
 ORDER BY    
     salary_year_avg DESC
-LIMIT 10
+LIMIT 10;
 
 
 /*

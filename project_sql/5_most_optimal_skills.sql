@@ -52,7 +52,7 @@ INNER JOIN
 ORDER BY
     demand_skills.count_jobs DESC,
     average_salary.avg_salary DESC
-LIMIT 10
+LIMIT 10;
 
 
 /*

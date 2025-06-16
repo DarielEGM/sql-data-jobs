@@ -11,8 +11,7 @@ WITH top_paying_jobs AS (
     SELECT 
         job_id,
         job_title,
-        salary_year_avg,
-        company_dim.name AS company_name
+        salary_year_avg
     FROM
         job_postings_fact
     LEFT JOIN
@@ -28,7 +27,6 @@ SELECT
     top_paying_jobs.job_id,
     top_paying_jobs.job_title,
     top_paying_jobs.salary_year_avg,
-    top_paying_jobs.company_name,
     skills_dim.skills
 FROM 
     skills_job_dim
@@ -38,7 +36,7 @@ INNER JOIN
     top_paying_jobs ON top_paying_jobs.job_id = skills_job_dim.job_id
 ORDER BY    
     top_paying_jobs.salary_year_avg DESC
-LIMIT 10
+LIMIT 10;
 
 
 /*
@@ -62,70 +60,60 @@ Traditional Tools: Excel still remains relevant despite the focus on more advanc
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "sql"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "python"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "r"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "azure"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "databricks"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "aws"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "pandas"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "pyspark"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "jupyter"
   },
   {
     "job_id": 552322,
     "job_title": "Associate Director- Data Insights",
     "salary_year_avg": "255829.5",
-    "company_name": "AT&T",
     "skills": "excel"
   }
 ]
